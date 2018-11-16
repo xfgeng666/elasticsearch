@@ -39,6 +39,7 @@ import org.elasticsearch.common.xcontent.XContentHelper;
 import org.elasticsearch.common.xcontent.XContentParser;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.VersionType;
+import org.elasticsearch.index.mapper.MapperService;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -157,9 +158,23 @@ public class TermVectorsRequest extends SingleShardRequest<TermVectorsRequest> i
 
     /**
      * Constructs a new term vector request for a document that will be fetch
+     * from the provided index. Use {@link #id(String)} to specify the document to load.
+     */
+    public TermVectorsRequest(String index, String id) {
+        super(index);
+        this.id = id;
+        this.type = MapperService.SINGLE_MAPPING_NAME;
+    }
+
+    /**
+     * Constructs a new term vector request for a document that will be fetch
      * from the provided index. Use {@link #type(String)} and
      * {@link #id(String)} to specify the document to load.
+     *
+     * @deprecated Types are in the process of being removed, use
+     * {@link TermVectorsRequest(String, String)} instead.
      */
+    @Deprecated
     public TermVectorsRequest(String index, String type, String id) {
         super(index);
         this.id = id;

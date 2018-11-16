@@ -67,7 +67,7 @@ And type:
 
 [source,js]
 --------------------------------------------------
-POST /twitter/_doc/_mtermvectors
+POST /twitter/_mtermvectors
 {
    "docs": [
       {
@@ -90,7 +90,7 @@ If all requested documents are on same index and have same type and also the par
 
 [source,js]
 --------------------------------------------------
-POST /twitter/_doc/_mtermvectors
+POST /twitter/_mtermvectors
 {
     "ids" : ["1", "2"],
     "parameters": {

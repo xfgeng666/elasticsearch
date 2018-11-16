@@ -1558,18 +1558,16 @@ public class CRUDDocumentationIT extends ESRestHighLevelClientTestCase {
 
         {
             // tag::term-vectors-request
-            TermVectorsRequest request = new TermVectorsRequest("authors", "_doc", "1");
+            TermVectorsRequest request = new TermVectorsRequest("authors", "1");
             request.setFields("user");
             // end::term-vectors-request
         }
 
         {
             // tag::term-vectors-request-artificial
-
             XContentBuilder docBuilder = XContentFactory.jsonBuilder();
             docBuilder.startObject().field("user", "guest-user").endObject();
             TermVectorsRequest request = new TermVectorsRequest("authors",
-                "_doc",
                 docBuilder); // <1>
             // end::term-vectors-request-artificial
 
@@ -1600,7 +1598,7 @@ public class CRUDDocumentationIT extends ESRestHighLevelClientTestCase {
             // end::term-vectors-request-optional-arguments
         }
 
-        TermVectorsRequest request = new TermVectorsRequest("authors", "_doc", "1");
+        TermVectorsRequest request = new TermVectorsRequest("authors", "1");
         request.setFields("user");
 
         // tag::term-vectors-execute
