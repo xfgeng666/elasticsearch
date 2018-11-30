@@ -213,4 +213,7 @@ h3. Upgrading from older Elasticsearch versions
 
 In order to ensure a smooth upgrade process from earlier versions of Elasticsearch, please see our "upgrade documentation":https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html for more details on the upgrade process.
 
-123
+donation：
+<img src="https://github.com/xfgeng666/Apollo/blob/master/images/wx_pay.png" width="50%" alt="微信支付" align="center">
+<img src="https://github.com/xfgeng666/Apollo/blob/master/images/zfb_pay.jpg" width="50%" alt="支付宝支付" align="center">
+
